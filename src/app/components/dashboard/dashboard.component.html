@@ -1,3 +1,15 @@
-<p>
-  dashboard works!
-</p>
+<h2>Liste des étudiants </h2>
+
+<!--Faire une boucle for...of sur une collection de données-->
+<article *ngFor="let item of myStudentList">
+  {{item.firstName}} <b>{{item.lastName}}</b> 
+
+<!--Utilisation de -->
+<span *ngIf="item.state == 0">Absent</span>
+<span *ngIf="item.state == 1">Présent</span>
+<span *ngIf="item.state == 2">Retard</span>
+
+
+</article>
+
+
