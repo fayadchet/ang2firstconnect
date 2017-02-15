@@ -2,13 +2,16 @@
 
 <!--Faire une boucle for...of sur une collection de données-->
 <article *ngFor="let item of myStudentList">
+
+<div (click)="showStudentDetail(item.id)">
+
   {{item.firstName}} <b>{{item.lastName}}</b> 
 
-<!--Utilisation de -->
-<span *ngIf="item.state == 0">Absent</span>
-<span *ngIf="item.state == 1">Présent</span>
-<span *ngIf="item.state == 2">Retard</span>
-
+  <!--Utilisation de conditions if dans la vue -->
+  <span *ngIf="item.state == 0">Absent</span>
+  <span *ngIf="item.state == 1">Présent</span>
+  <span *ngIf="item.state == 2">Retard</span>
+</div>
 
 </article>
 

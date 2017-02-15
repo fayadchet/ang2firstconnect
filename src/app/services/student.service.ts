@@ -12,24 +12,28 @@ import 'rxjs/add/operator/toPromise';
  export const LIST = [
  
     {
+      id: 0,
       firstName: 'Georges',
       lastName: 'Harrison',
       state:1
 
     },
       {
+        id: 1,
       firstName: 'Paul',
       lastName: 'McCartney',
       state:0
 
       },
         {
+          id: 2,
       firstName: 'John',
       lastName: 'Lennon',
       state:2
 
        },
          {
+           id:3,
       firstName: 'Ringo',
       lastName: 'Starr',
       state:0
@@ -74,5 +78,26 @@ getListLength(): Promise<number>{
   return Promise.resolve(LIST.length);
 
   };
+
+  //Création d'une fonction pour mettre à jour un item du tableau LIST
+  editStudentList(){
+
+    //Créer une varible pour l'item à modifier 
+    let selectedStudent = LIST[0];
+
+    //Modifier le firstName et le LastName et le State de l'item sélectionné
+    selectedStudent.firstName = 'Fayad';
+    selectedStudent.lastName = 'Chettaoui';
+    selectedStudent.state = 0;
+  }
+
+  //Création d'une fonction pour récupérer les informations d'un étudiant
+getSelectedStudentInfo(id): Promise<any>{
+
+
+return Promise.resolve(LIST[id]);
+}
+
+
 
 };

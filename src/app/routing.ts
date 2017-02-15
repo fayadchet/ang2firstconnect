@@ -35,8 +35,8 @@ const appRoutes: Routes = [
     },
 
     {
-        //Définir l'adresse 
-        path: 'edit-student',
+        //Définir l'adresse dynamique 
+        path: 'edit-student/:id',
         //Définir le composant à utiliser
         component: EditStudentComponent
     }
